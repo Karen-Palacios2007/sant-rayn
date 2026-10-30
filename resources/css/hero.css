@@ -1,0 +1,157 @@
+.hero {
+    /* Altura mÃ­nima del Hero */
+    min-height: 600px;
+
+    /* Centra verticalmente el contenido */
+    display: flex;
+    align-items: center;
+
+    /* Coloca el contenido hacia la izquierda */
+    justify-content: flex-start;
+
+    /* Espacio interno */
+    padding: 80px 8%;
+
+    /* Fondo negro para crear contraste */
+    background-color: var(--color-principal);
+
+    /* Texto blanco */
+    color: var(--color-secundario);
+}
+
+
+/* ðŸŸ¢ CONTENEDOR DEL TEXTO DEL HERO */
+.hero-content {
+    /* Limita el ancho del texto */
+    max-width: 650px;
+}
+
+
+/* ðŸŸ¢ SUBTÃTULO */
+.hero-subtitle {
+    /* TamaÃ±o pequeÃ±o */
+    font-size: 13px;
+
+    /* Espaciado entre letras */
+    letter-spacing: 3px;
+
+    /* Espacio inferior */
+    margin-bottom: 25px;
+
+    /* Hace que el texto sea ligeramente destacado */
+    font-weight: 600;
+}
+
+
+/* ðŸŸ¢ TÃTULO PRINCIPAL */
+.hero-title {
+    /* TamaÃ±o grande del tÃ­tulo */
+    font-size: clamp(48px, 7vw, 96px);
+
+    /* Altura entre lÃ­neas */
+    line-height: 0.95;
+
+    /* Peso de la tipografÃ­a */
+    font-weight: 700;
+
+    /* Espacio debajo del tÃ­tulo */
+    margin-bottom: 30px;
+
+    /* Espaciado entre letras */
+    letter-spacing: -2px;
+}
+
+
+/* ðŸŸ¢ DESCRIPCIÃ“N DEL HERO */
+.hero-description {
+    /* TamaÃ±o del texto */
+    font-size: 18px;
+
+    /* Ancho mÃ¡ximo */
+    max-width: 520px;
+
+    /* Altura de lÃ­nea */
+    line-height: 1.7;
+
+    /* Color ligeramente mÃ¡s suave que el blanco */
+    opacity: 0.75;
+
+    /* Espacio inferior */
+    margin-bottom: 35px;
+}
+
+
+/* =========================================================
+   ðŸŸ¢ BOTÃ“N PRINCIPAL DEL HERO
+   ========================================================= */
+
+.hero-button {
+    /* Permite aplicar correctamente dimensiones y espacios */
+    display: inline-block;
+
+    /* Fondo blanco */
+    background-color: var(--color-secundario);
+
+    /* Texto negro */
+    color: var(--color-principal);
+
+    /* Espaciado interno */
+    padding: 15px 30px;
+
+    /* TamaÃ±o del texto */
+    font-size: 14px;
+
+    /* Peso del texto */
+    font-weight: 600;
+
+    /* TransiciÃ³n para el efecto hover */
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
+}
+
+
+/* ðŸŸ¢ EFECTO DEL BOTÃ“N AL PASAR EL MOUSE */
+.hero-button:hover {
+    /* Fondo transparente */
+    background-color: transparent;
+
+    /* Texto blanco */
+    color: var(--color-secundario);
+
+    /* Borde blanco */
+    outline: 1px solid var(--color-secundario);
+}
+
+
+/* =========================================================
+   ðŸŸ¢ ADAPTACIÃ“N DEL HERO PARA CELULARES
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .hero {
+        /* Reducimos la altura */
+        min-height: 500px;
+
+        /* Reducimos el espacio lateral */
+        padding: 60px 25px;
+    }
+
+
+    .hero-title {
+        /* TamaÃ±o mÃ¡s pequeÃ±o */
+        font-size: clamp(42px, 12vw, 64px);
+    }
+
+
+    .hero-description {
+        /* Texto ligeramente mÃ¡s pequeÃ±o */
+        font-size: 16px;
+    }
+}
+
+/* =========================================================
+   ðŸŸ¢ SECCIÃ“N DE CATEGORÃAS
+   Contiene las diferentes categorÃ­as de productos.
+   ========================================================= */

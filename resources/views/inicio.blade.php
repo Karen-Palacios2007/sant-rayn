@@ -392,8 +392,84 @@
 
 </section>
 
+{{-- 🟢 SECCIÓN NUESTRA ESENCIA
+     Presenta la identidad y filosofía de SANT RAYN.
+     El detalle rojo vino aporta un toque gótico discreto.
+--}}
+<section class="brand-story" id="nosotros">
+
+    <div class="brand-story-content">
+
+        {{-- 🟢 Texto pequeño que identifica la sección --}}
+        <p class="brand-story-label">
+            NUESTRA ESENCIA
+        </p>
+
+        {{-- 🟢 Título principal de la sección --}}
+        <h2>
+            No seguimos tendencias.
+            <span>Construimos identidad.</span>
+        </h2>
+
+        {{-- 🟢 Descripción de la marca --}}
+        <p class="brand-story-description">
+            SANT RAYN nace de la unión entre la elegancia,
+            la expresión personal y una estética que rompe
+            con lo convencional. Cada prenda representa
+            una forma auténtica de vestir.
+        </p>
+
+        {{-- 🟢 Detalle decorativo de la marca --}}
+        <div class="brand-story-detail">
+            <span></span>
+            <p>DISEÑADO PARA SER DIFERENTE</p>
+            <span></span>
+        </div>
+
+    </div>
+
+</section>
 </main>
 
+{{-- PIE DE PÁGINA DE SANT RAYN --}}
+<footer class="site-footer">
+
+    <div class="footer-main">
+
+        <div class="footer-brand">
+            <a href="#" class="footer-logo">SANT RAYN</a>
+
+            <p>
+                Tu estilo. Tu identidad. Tu esencia.
+            </p>
+
+            <span class="footer-accent">
+                DESIGNED TO BE DIFFERENT
+            </span>
+        </div>
+
+        <div class="footer-column">
+            <h3>Explora</h3>
+            <a href="#">Inicio</a>
+            <a href="#">Catálogo</a>
+            <a href="#nosotros">Nosotros</a>
+        </div>
+
+        <div class="footer-column">
+            <h3>Información</h3>
+            <a href="#">Contacto</a>
+            <a href="#">Políticas de compra</a>
+            <a href="#">Privacidad</a>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 SANT RAYN. Todos los derechos reservados.</p>
+        <span>ESTILO SIN LÍMITES.</span>
+    </div>
+
+</footer>
 
 </body>
 

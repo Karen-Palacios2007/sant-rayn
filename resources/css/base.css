@@ -1,0 +1,89 @@
+@import 'tailwindcss';
+
+/* =========================================================
+   ðŸŸ¢ CONFIGURACIÃ“N GENERAL DE SANT RAYN
+   Este bloque define los colores y valores principales
+   que utilizaremos en toda la pÃ¡gina.
+   ========================================================= */
+
+:root {
+    /* ðŸŸ¢ Color principal: negro */
+    --color-principal: #000000;
+
+    /* ðŸŸ¢ Color secundario: blanco */
+    --color-secundario: #ffffff;
+
+    /* ðŸŸ¢ Color utilizado para textos secundarios */
+    --color-texto-secundario: #666666;
+
+    /* ðŸŸ¢ Color para bordes suaves */
+    --color-borde: #e5e5e5;
+
+    /* ðŸŸ¢ Color de fondo general */
+    --color-fondo: #ffffff;
+}
+
+
+/* =========================================================
+   ðŸŸ¢ RESETEO BÃSICO DEL DOCUMENTO
+   Eliminamos los mÃ¡rgenes y espacios predeterminados
+   que coloca el navegador.
+   ========================================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* =========================================================
+   ðŸŸ¢ CUERPO PRINCIPAL DE LA PÃGINA
+   AquÃ­ definimos la apariencia general del sitio.
+   ========================================================= */
+
+body {
+    background-color: var(--color-fondo);
+    color: var(--color-principal);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+}
+
+/* =========================================================
+   ðŸŸ¢ ENLACES
+   Eliminamos el estilo azul predeterminado del navegador.
+   ========================================================= */
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   ðŸŸ¢ BOTONES
+   Quitamos algunos estilos predeterminados del navegador.
+   ========================================================= */
+
+button {
+    border: none;
+    background: none;
+    font: inherit;
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   ðŸŸ¢ IMÃGENES
+   Evitamos que las imÃ¡genes sobresalgan de su contenedor.
+   ========================================================= */
+
+img {
+    display: block;
+    max-width: 100%;
+}
+/* =========================================================
+   ðŸŸ¢ HEADER PRINCIPAL DE SANT RAYN
+   Este bloque controla la apariencia del encabezado,
+   incluyendo el logo, menÃº y acciones.
+   ========================================================= */

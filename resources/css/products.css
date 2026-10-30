@@ -1,0 +1,233 @@
+.featured-products {
+    /* Espacio superior e inferior de la secciÃ³n */
+    padding: 100px 8%;
+
+    /* Fondo ligeramente diferente para separar
+       esta secciÃ³n de las categorÃ­as */
+    background-color: #f7f7f7;
+
+    /* Color principal del texto */
+    color: var(--color-principal);
+}
+
+
+/* =========================================================
+   ðŸŸ¢ GRID DE PRODUCTOS
+   Organiza los productos en cuatro columnas.
+   ========================================================= */
+
+.products-grid {
+    /* Activa CSS Grid */
+    display: grid;
+
+    /* Cuatro productos por fila */
+    grid-template-columns: repeat(4, 1fr);
+
+    /* Espacio entre productos */
+    gap: 20px;
+}
+
+
+/* =========================================================
+   ðŸŸ¢ TARJETA INDIVIDUAL DEL PRODUCTO
+   ========================================================= */
+
+.product-card {
+    /* Fondo blanco de la tarjeta */
+    background-color: var(--color-secundario);
+
+    /* Evita que el contenido sobresalga */
+    overflow: hidden;
+
+    /* TransiciÃ³n para el efecto hover */
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* =========================================================
+   ðŸŸ¢ ÃREA DE IMAGEN DEL PRODUCTO
+   ========================================================= */
+
+/* =========================================================
+   ðŸŸ¢ IMÃGENES DE LOS PRODUCTOS
+   Controla cÃ³mo se muestran las fotografÃ­as dentro
+   de cada tarjeta.
+   ========================================================= */
+
+.product-image {
+
+    /* Mantiene todas las imÃ¡genes con la misma proporciÃ³n */
+    aspect-ratio: 4 / 5;
+
+    /* Fondo neutro para las fotografÃ­as */
+    background-color: #eeeeee;
+
+    /* Ocupa todo el ancho disponible */
+    width: 100%;
+
+    /* Oculta cualquier parte de la imagen que sobresalga */
+    overflow: hidden;
+
+    /* Permite aplicar efectos de movimiento */
+    position: relative;
+}
+
+
+/* =========================================================
+   ðŸŸ¢ IMAGEN REAL DEL PRODUCTO
+   ========================================================= */
+
+.product-image img {
+
+    /* La imagen ocupa todo el contenedor */
+    width: 100%;
+
+    /* La imagen ocupa toda la altura */
+    height: 100%;
+
+    /* Evita que la imagen se deforme */
+    object-fit: cover;
+
+    /* Centra la fotografÃ­a */
+    object-position: center;
+
+    /* TransiciÃ³n suave */
+    transition: transform 0.5s ease;
+}
+
+
+/* =========================================================
+   ðŸŸ¢ EFECTO AL PASAR EL CURSOR
+   ========================================================= */
+
+.product-card:hover .product-image img {
+
+    /* Acerca ligeramente la imagen */
+    transform: scale(1.04);
+}
+
+
+/* =========================================================
+   ðŸŸ¢ INFORMACIÃ“N DEL PRODUCTO
+   ========================================================= */
+
+.product-info {
+    /* Espacio interno */
+    padding: 20px 5px;
+}
+
+
+/* ðŸŸ¢ CATEGORÃA DEL PRODUCTO */
+
+.product-category {
+    /* TamaÃ±o pequeÃ±o */
+    font-size: 11px;
+
+    /* Espacio entre letras */
+    letter-spacing: 2px;
+
+    /* Color secundario */
+    color: var(--color-texto-secundario);
+
+    /* Espacio inferior */
+    margin-bottom: 8px;
+}
+
+
+/* ðŸŸ¢ NOMBRE DEL PRODUCTO */
+
+.product-name {
+    /* TamaÃ±o del nombre */
+    font-size: 19px;
+
+    /* Peso medio */
+    font-weight: 500;
+
+    /* Espacio inferior */
+    margin-bottom: 8px;
+}
+
+
+/* ðŸŸ¢ PRECIO DEL PRODUCTO */
+
+.product-price {
+    /* TamaÃ±o del precio */
+    font-size: 15px;
+
+    /* Peso destacado */
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   ðŸŸ¢ EFECTO HOVER DE LA TARJETA
+   ========================================================= */
+
+.product-card:hover {
+    /* Eleva ligeramente la tarjeta */
+    transform: translateY(-6px);
+
+    /* Agrega una sombra suave */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================================================
+   ðŸŸ¢ EFECTO SOBRE EL ÃREA DE IMAGEN
+   ========================================================= */
+
+.product-card:hover .product-image {
+    /* Aumenta ligeramente la imagen */
+    transform: scale(1.02);
+}
+
+
+/* =========================================================
+   ðŸŸ¢ RESPONSIVE PARA TABLETS
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+    .products-grid {
+        /* Tres productos por fila */
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+/* =========================================================
+   ðŸŸ¢ RESPONSIVE PARA PANTALLAS MEDIANAS
+   ========================================================= */
+
+@media (max-width: 750px) {
+
+    .products-grid {
+        /* Dos productos por fila */
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* =========================================================
+   ðŸŸ¢ RESPONSIVE PARA CELULARES
+   ========================================================= */
+
+@media (max-width: 500px) {
+
+    .featured-products {
+        /* Reduce el espacio lateral */
+        padding: 70px 25px;
+    }
+
+    .products-grid {
+        /* Un producto por fila */
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =====================================================
+   ðŸŸ¢ SECCIÃ“N NUESTRA ESENCIA
+   PresentaciÃ³n premium de la identidad de SANT RAYN.
+   ===================================================== */

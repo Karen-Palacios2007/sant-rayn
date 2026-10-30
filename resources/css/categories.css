@@ -1,0 +1,240 @@
+.categories-section {
+    /* Espacio superior e inferior de la secciÃ³n */
+    padding: 100px 8%;
+
+    /* Fondo blanco */
+    background-color: var(--color-secundario);
+
+    /* Texto negro */
+    color: var(--color-principal);
+}
+
+
+/* =========================================================
+   ðŸŸ¢ ENCABEZADO DE LA SECCIÃ“N
+   ========================================================= */
+
+.section-heading {
+    /* Limita el ancho del encabezado */
+    max-width: 700px;
+
+    /* Espacio inferior antes de las tarjetas */
+    margin-bottom: 60px;
+}
+
+
+/* ðŸŸ¢ PEQUEÃ‘A ETIQUETA "DESCUBRE" */
+
+.section-label {
+    /* TamaÃ±o pequeÃ±o */
+    font-size: 12px;
+
+    /* Espacio entre las letras */
+    letter-spacing: 3px;
+
+    /* Texto en negrita */
+    font-weight: 600;
+
+    /* Espacio debajo */
+    margin-bottom: 15px;
+}
+
+
+/* ðŸŸ¢ TÃTULO DE LA SECCIÃ“N */
+
+.section-title {
+    /* TamaÃ±o del tÃ­tulo */
+    font-size: clamp(36px, 5vw, 64px);
+
+    /* Altura de las lÃ­neas */
+    line-height: 1;
+
+    /* Peso de la letra */
+    font-weight: 600;
+
+    /* Espacio debajo */
+    margin-bottom: 20px;
+
+    /* Espaciado ligeramente reducido */
+    letter-spacing: -1px;
+}
+
+
+/* ðŸŸ¢ DESCRIPCIÃ“N DE LA SECCIÃ“N */
+
+.section-description {
+    /* TamaÃ±o del texto */
+    font-size: 17px;
+
+    /* Color secundario */
+    color: var(--color-texto-secundario);
+
+    /* Altura de lÃ­nea */
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   ðŸŸ¢ GRID DE CATEGORÃAS
+   Organiza las tarjetas en columnas.
+   ========================================================= */
+
+.categories-grid {
+    /* Activa CSS Grid */
+    display: grid;
+
+    /* Crea tres columnas del mismo tamaÃ±o */
+    grid-template-columns: repeat(3, 1fr);
+
+    /* Espacio entre las tarjetas */
+    gap: 20px;
+}
+
+
+/* =========================================================
+   ðŸŸ¢ TARJETA INDIVIDUAL DE CATEGORÃA
+   ========================================================= */
+
+.category-card {
+    /* Altura de cada tarjeta */
+    min-height: 380px;
+
+    /* Fondo negro */
+    background-color: var(--color-principal);
+
+    /* Texto blanco */
+    color: var(--color-secundario);
+
+    /* Permite posicionar el contenido dentro */
+    position: relative;
+
+    /* Evita que el contenido sobresalga */
+    overflow: hidden;
+
+    /* TransiciÃ³n para el efecto hover */
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease;
+}
+
+
+/* ðŸŸ¢ CONTENIDO DE LA TARJETA */
+
+.category-card-content {
+    /* Coloca el contenido en columna */
+    display: flex;
+
+    flex-direction: column;
+
+    /* Alinea el contenido hacia el final */
+    justify-content: flex-end;
+
+    /* Ocupa toda la tarjeta */
+    height: 100%;
+
+    /* Espacio interno */
+    padding: 30px;
+}
+
+
+/* =========================================================
+   ðŸŸ¢ NÃšMERO DE LA CATEGORÃA
+   ========================================================= */
+
+.category-number {
+    /* TamaÃ±o pequeÃ±o */
+    font-size: 12px;
+
+    /* Espaciado de letras */
+    letter-spacing: 2px;
+
+    /* Reduce la intensidad */
+    opacity: 0.6;
+
+    /* Espacio inferior */
+    margin-bottom: 15px;
+}
+
+
+/* ðŸŸ¢ NOMBRE DE LA CATEGORÃA */
+
+.category-card h3 {
+    /* TamaÃ±o del nombre */
+    font-size: 32px;
+
+    /* Peso de la letra */
+    font-weight: 500;
+
+    /* Espacio inferior */
+    margin-bottom: 20px;
+}
+
+
+/* ðŸŸ¢ ENLACE "EXPLORAR" */
+
+.category-card span {
+    /* TamaÃ±o del texto */
+    font-size: 13px;
+
+    /* Espaciado */
+    letter-spacing: 1px;
+
+    /* Subrayado */
+    text-decoration: underline;
+
+    /* El subrayado queda un poco separado */
+    text-underline-offset: 5px;
+}
+
+
+/* =========================================================
+   ðŸŸ¢ EFECTO HOVER DE LAS TARJETAS
+   ========================================================= */
+
+.category-card:hover {
+    /* Eleva ligeramente la tarjeta */
+    transform: translateY(-8px);
+
+    /* Cambia el fondo a gris muy oscuro */
+    background-color: #181818;
+}
+
+
+/* =========================================================
+   ðŸŸ¢ RESPONSIVE PARA TABLETS
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .categories-grid {
+        /* Dos columnas en pantallas medianas */
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* =========================================================
+   ðŸŸ¢ RESPONSIVE PARA CELULARES
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .categories-section {
+        /* Reduce los espacios laterales */
+        padding: 70px 25px;
+    }
+
+    .categories-grid {
+        /* Una sola columna en celulares */
+        grid-template-columns: 1fr;
+    }
+
+    .category-card {
+        /* Reducimos la altura */
+        min-height: 300px;
+    }
+}
+
+/* =========================================================
+   ðŸŸ¢ SECCIÃ“N DE PRODUCTOS DESTACADOS
+   ========================================================= */

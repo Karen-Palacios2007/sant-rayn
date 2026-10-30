@@ -1,0 +1,161 @@
+/* ðŸŸ¢ CONTENEDOR PRINCIPAL DEL HEADER */
+.site-header {
+    /* Coloca los elementos uno al lado del otro */
+    display: flex;
+
+    /* Centra verticalmente los elementos */
+    align-items: center;
+
+    /* Separa el logo, menÃº y acciones */
+    justify-content: space-between;
+
+    /* Espacio interno superior/inferior y lateral */
+    padding: 22px 50px;
+
+    /* LÃ­nea inferior para separar el header del contenido */
+    border-bottom: 1px solid var(--color-borde);
+
+    /* Fondo blanco */
+    background-color: var(--color-secundario);
+
+    /* Hace que el header permanezca visible al desplazarse */
+    position: sticky;
+    top: 0;
+
+    /* Mantiene el header por encima del resto del contenido */
+    z-index: 100;
+}
+
+
+/* =========================================================
+   ðŸŸ¢ LOGOTIPO DE SANT RAYN
+   ========================================================= */
+
+.logo {
+    /* TamaÃ±o del nombre de la marca */
+    font-size: 24px;
+
+    /* Hace que el nombre tenga mayor peso visual */
+    font-weight: 700;
+
+    /* Espaciado entre las letras */
+    letter-spacing: 2px;
+
+    /* Evita que el texto se divida */
+    white-space: nowrap;
+
+        /* ðŸŸ¢ TransiciÃ³n para el efecto visual del logo */
+    transition: opacity 0.3s ease;
+}
+/* ðŸŸ¢ EFECTO DEL LOGO AL PASAR EL MOUSE */
+.logo:hover {
+    opacity: 0.65;
+}
+
+
+/* =========================================================
+   ðŸŸ¢ MENÃš PRINCIPAL
+   ========================================================= */
+
+.main-nav {
+    /* Coloca los enlaces horizontalmente */
+    display: flex;
+
+    /* Espacio entre cada enlace */
+    gap: 35px;
+}
+
+
+/* ðŸŸ¢ ENLACES DEL MENÃš */
+.main-nav a {
+    /* TamaÃ±o del texto */
+    font-size: 14px;
+
+    /* Letras ligeramente separadas */
+    letter-spacing: 0.5px;
+
+    /* TransiciÃ³n suave al pasar el mouse */
+    transition: opacity 0.3s ease;
+}
+
+
+/* ðŸŸ¢ EFECTO AL PASAR EL MOUSE SOBRE UN ENLACE */
+.main-nav a:hover {
+    /* Reduce ligeramente la intensidad del enlace */
+    opacity: 0.55;
+}
+
+
+/* =========================================================
+   ðŸŸ¢ ACCIONES DEL HEADER
+   Buscar, Carrito y Cuenta.
+   ========================================================= */
+
+.header-actions {
+    /* Coloca las acciones horizontalmente */
+    display: flex;
+
+    /* Espacio entre cada acciÃ³n */
+    gap: 20px;
+
+    /* Centra verticalmente los elementos */
+    align-items: center;
+}
+
+
+/* ðŸŸ¢ BOTONES Y ENLACES DE LAS ACCIONES */
+.header-actions button,
+.header-actions a {
+    /* TamaÃ±o del texto */
+    font-size: 13px;
+
+    /* Color principal */
+    color: var(--color-principal);
+
+    /* TransiciÃ³n para los efectos */
+    transition: opacity 0.3s ease;
+}
+
+
+/* ðŸŸ¢ EFECTO AL PASAR EL MOUSE SOBRE LAS ACCIONES */
+.header-actions button:hover,
+.header-actions a:hover {
+    opacity: 0.55;
+}
+
+
+/* =========================================================
+   ðŸŸ¢ ADAPTACIÃ“N PARA DISPOSITIVOS PEQUEÃ‘OS
+   Permite que el header se adapte a celulares.
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    /* ðŸŸ¢ Reduce el espacio del encabezado */
+    .site-header {
+        padding: 18px 20px;
+
+        /* Permite que los elementos bajen a otra lÃ­nea */
+        flex-wrap: wrap;
+
+        /* Espacio entre las filas */
+        gap: 20px;
+    }
+
+    /* ðŸŸ¢ Reduce el espacio del menÃº */
+    .main-nav {
+        gap: 18px;
+    }
+
+    /* ðŸŸ¢ Ocupa todo el ancho disponible */
+    .header-actions {
+        width: 100%;
+
+        /* Centra las acciones */
+        justify-content: center;
+    }
+}
+/* =========================================================
+   ðŸŸ¢ HERO PRINCIPAL DE SANT RAYN
+   SecciÃ³n principal que aparece despuÃ©s del encabezado.
+   ========================================================= */

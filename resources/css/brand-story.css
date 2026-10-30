@@ -1,0 +1,137 @@
+.brand-story {
+    /* Fondo oscuro para diferenciar esta secciÃ³n */
+    background-color: #111111;
+
+    /* Texto claro sobre el fondo oscuro */
+    color: #ffffff;
+
+    /* Espacio interior arriba y abajo */
+    padding: 120px 8%;
+
+    /* Centra el contenido de la secciÃ³n */
+    text-align: center;
+}
+
+/* ðŸŸ¢ CONTENEDOR DEL TEXTO */
+
+.brand-story-content {
+    /* Evita que las lÃ­neas de texto sean demasiado largas */
+    max-width: 900px;
+
+    /* Centra el contenedor horizontalmente */
+    margin: 0 auto;
+}
+
+/* ðŸŸ¢ ETIQUETA SUPERIOR */
+
+.brand-story-label {
+    /* Color rojo vino como acento gÃ³tico */
+    color: #9b303d;
+
+    /* Letras pequeÃ±as y espaciadas */
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 4px;
+
+    /* SeparaciÃ³n inferior */
+    margin-bottom: 28px;
+}
+
+/* ðŸŸ¢ TÃTULO PRINCIPAL */
+
+.brand-story h2 {
+    /* TamaÃ±o destacado para el mensaje */
+    font-size: clamp(32px, 5vw, 58px);
+
+    /* Reduce el espacio entre lÃ­neas */
+    line-height: 1.15;
+
+    /* Evita que el tÃ­tulo sea demasiado ancho */
+    max-width: 850px;
+    margin: 0 auto 28px;
+}
+
+/* ðŸŸ¢ FRASE DESTACADA */
+
+.brand-story h2 span {
+    /* Resalta la segunda frase con rojo vino */
+    color: #b34a55;
+
+    /* Coloca la frase en una lÃ­nea nueva */
+    display: block;
+}
+
+/* ðŸŸ¢ DESCRIPCIÃ“N */
+
+.brand-story-description {
+    /* Texto gris claro para una lectura cÃ³moda */
+    color: #c5c5c5;
+
+    /* TamaÃ±o y altura de lÃ­nea */
+    font-size: 17px;
+    line-height: 1.9;
+
+    /* Limita el ancho y centra el pÃ¡rrafo */
+    max-width: 680px;
+    margin: 0 auto;
+}
+
+/* ðŸŸ¢ DETALLE DECORATIVO */
+
+.brand-story-detail {
+    /* Alinea las lÃ­neas y el texto en una fila */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+
+    /* Separa el detalle de la descripciÃ³n */
+    margin-top: 45px;
+}
+
+/* ðŸŸ¢ LÃNEAS ROJO VINO */
+
+.brand-story-detail span {
+    /* LÃ­neas finas y discretas */
+    width: 45px;
+    height: 1px;
+    background-color: #9b303d;
+}
+
+/* ðŸŸ¢ TEXTO DECORATIVO */
+
+.brand-story-detail p {
+    /* Letras pequeÃ±as y espaciadas */
+    color: #d8d8d8;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+
+/* ðŸŸ¢ ADAPTACIÃ“N PARA CELULARES */
+
+@media (max-width: 600px) {
+    .brand-story {
+        /* Reduce el espacio en pantallas pequeÃ±as */
+        padding: 80px 7%;
+    }
+
+    .brand-story-description {
+        /* Ajusta el texto para una lectura cÃ³moda */
+        font-size: 15px;
+    }
+
+    .brand-story-detail {
+        /* Reduce la separaciÃ³n de los elementos */
+        gap: 10px;
+    }
+
+    .brand-story-detail span {
+        /* Acorta las lÃ­neas decorativas */
+        width: 24px;
+    }
+}
+
+/* =====================================================
+   PIE DE PÃGINA SANT RAYN
+   ===================================================== */
