@@ -281,6 +281,10 @@
                     $60.000
                 </p>
 
+                <button type="button" class="product-detail-button" data-product-details>
+                Ver detalles
+                </button>
+
             </div>
 
         </article>
@@ -313,6 +317,10 @@
                 <p class="product-price">
                     $120.000
                 </p>
+
+                <button type="button" class="product-detail-button" data-product-details>
+                Ver detalles
+                </button>
 
             </div>
 
@@ -347,6 +355,10 @@
                     $90.000
                 </p>
 
+                <button type="button" class="product-detail-button" data-product-details>
+                Ver detalles
+                </button>                
+
             </div>
 
         </article>
@@ -380,6 +392,10 @@
                     $120.000
                 </p>
 
+                <button type="button" class="product-detail-button" data-product-details>
+                Ver detalles
+                </button>                
+
             </div>
 
         </article>
@@ -390,6 +406,29 @@
      Por ahora apunta a # porque todavía no hemos creado
      la ruta del catálogo en Laravel.
      ===================================================== --}}
+
+<dialog
+    class="product-dialog"
+    id="product-detail-dialog"
+    aria-labelledby="product-dialog-title"
+>
+    <form method="dialog" class="product-dialog-close-form">
+        <button type="submit" class="product-dialog-close" aria-label="Cerrar detalles">
+            ×
+        </button>
+    </form>
+
+    <div class="product-dialog-content">
+        <img id="product-dialog-image" src="" alt="">
+
+        <div class="product-dialog-info">
+            <p id="product-dialog-category" class="product-category"></p>
+            <h2 id="product-dialog-title"></h2>
+            <p id="product-dialog-price" class="product-price"></p>
+        </div>
+    </div>
+</dialog>
+
     <div class="catalog-link-container">
 
         <a href="#" class="catalog-link">

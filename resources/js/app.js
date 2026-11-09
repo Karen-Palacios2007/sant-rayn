@@ -50,3 +50,50 @@ document.addEventListener('DOMContentLoaded', () => {
 
     searchInput.addEventListener('input', updateProducts);
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const detailDialog = document.querySelector('#product-detail-dialog');
+    const detailButtons = document.querySelectorAll('[data-product-details]');
+
+    const dialogImage = document.querySelector('#product-dialog-image');
+    const dialogCategory = document.querySelector('#product-dialog-category');
+    const dialogTitle = document.querySelector('#product-dialog-title');
+    const dialogPrice = document.querySelector('#product-dialog-price');
+
+    if (
+        !detailDialog ||
+        !dialogImage ||
+        !dialogCategory ||
+        !dialogTitle ||
+        !dialogPrice
+    ) {
+        return;
+    }
+
+    detailButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+            const productCard = button.closest('.product-card');
+
+            if (!productCard) {
+                return;
+            }
+
+            const productImage = productCard.querySelector('.product-image img');
+            const productCategory = productCard.querySelector('.product-category');
+            const productName = productCard.querySelector('.product-name');
+            const productPrice = productCard.querySelector('.product-price');
+
+            if (!productImage || !productCategory || !productName || !productPrice) {
+                return;
+            }
+
+            dialogImage.src = productImage.src;
+            dialogImage.alt = productImage.alt;
+            dialogCategory.textContent = productCategory.textContent.trim();
+            dialogTitle.textContent = productName.textContent.trim();
+            dialogPrice.textContent = productPrice.textContent.trim();
+
+            detailDialog.showModal();
+        });
+    });
+});
