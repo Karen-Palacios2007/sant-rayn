@@ -214,28 +214,36 @@
      🟢 SECCIÓN DE PRODUCTOS DESTACADOS
      Presenta algunos productos principales de la tienda.
      ===================================================== --}}
-<section class="featured-products">
+<section class="featured-products" id="catalogo">
 
     {{-- 🟢 ENCABEZADO DE LA SECCIÓN --}}
-    <div class="section-heading">
+    <div class="catalog-controls">
+    <label class="visually-hidden" for="product-search">
+        Buscar productos
+    </label>
 
-        {{-- 🟢 ETIQUETA --}}
-        <p class="section-label">
-            SELECCIÓN SANT RAYN
-        </p>
+    <input
+        type="search"
+        id="product-search"
+        placeholder="Buscar productos..."
+        autocomplete="off"
+    >
 
-        {{-- 🟢 TÍTULO --}}
-        <h2 class="section-title">
-            Productos destacados
-        </h2>
-
-        {{-- 🟢 DESCRIPCIÓN --}}
-        <p class="section-description">
-            Descubre algunas de nuestras prendas esenciales.
-        </p>
-
+    <div class="product-filters" role="group" aria-label="Filtrar por categoría">
+        <button type="button" class="filter-button is-active" data-filter="todos" aria-pressed="true">
+            Todos
+        </button>
+        <button type="button" class="filter-button" data-filter="polos" aria-pressed="false">
+            Polos
+        </button>
+        <button type="button" class="filter-button" data-filter="chaquetas" aria-pressed="false">
+            Chaquetas
+        </button>
+        <button type="button" class="filter-button" data-filter="hoodies" aria-pressed="false">
+            Hoodies
+        </button>
     </div>
-
+</div>
 
     {{-- =================================================
          🟢 CONTENEDOR DE PRODUCTOS
@@ -266,12 +274,16 @@
                 </p>
 
                 <h3 class="product-name">
-                   Polo While
+                   Polo White
                 </h3>
 
                 <p class="product-price">
                     $60.000
                 </p>
+
+                <button type="button" class="product-detail-button" data-product-details>
+                Ver detalles
+                </button>
 
             </div>
 
@@ -306,6 +318,10 @@
                     $120.000
                 </p>
 
+                <button type="button" class="product-detail-button" data-product-details>
+                Ver detalles
+                </button>
+
             </div>
 
         </article>
@@ -338,6 +354,10 @@
                 <p class="product-price">
                     $90.000
                 </p>
+
+                <button type="button" class="product-detail-button" data-product-details>
+                Ver detalles
+                </button>                
 
             </div>
 
@@ -372,6 +392,10 @@
                     $120.000
                 </p>
 
+                <button type="button" class="product-detail-button" data-product-details>
+                Ver detalles
+                </button>                
+
             </div>
 
         </article>
@@ -382,6 +406,29 @@
      Por ahora apunta a # porque todavía no hemos creado
      la ruta del catálogo en Laravel.
      ===================================================== --}}
+
+<dialog
+    class="product-dialog"
+    id="product-detail-dialog"
+    aria-labelledby="product-dialog-title"
+>
+    <form method="dialog" class="product-dialog-close-form">
+        <button type="submit" class="product-dialog-close" aria-label="Cerrar detalles">
+            ×
+        </button>
+    </form>
+
+    <div class="product-dialog-content">
+        <img id="product-dialog-image" src="" alt="">
+
+        <div class="product-dialog-info">
+            <p id="product-dialog-category" class="product-category"></p>
+            <h2 id="product-dialog-title"></h2>
+            <p id="product-dialog-price" class="product-price"></p>
+        </div>
+    </div>
+</dialog>
+
     <div class="catalog-link-container">
 
         <a href="#" class="catalog-link">
