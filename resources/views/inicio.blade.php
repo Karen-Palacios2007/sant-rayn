@@ -59,7 +59,7 @@
             </button>
 
             {{-- 🟢 Enlace de acceso del usuario --}}
-            <a href="#" aria-label="Cuenta de usuario">
+            <a href="{{ route('cuenta') }}" aria-label="Cuenta de usuario">
                 Cuenta
             </a>
 

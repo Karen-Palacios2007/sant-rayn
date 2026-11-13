@@ -24,8 +24,8 @@ class LoginController extends Controller
 
             $request->session()->regenerate();
 
-            return redirect()->intended('/')
-                ->with('success', '¡Bienvenido a SANT RAYN!');
+            return redirect()->intended(route('cuenta'))
+                    ->with('success', '¡Bienvenido a SANT RAYN!');
         }
 
         return back()
